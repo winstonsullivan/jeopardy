@@ -1,0 +1,87 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+#final-category, #final-question, #betting-form {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 10px;
+}
+
+input[type="text"], input[type="number"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+}
+
+button, .footer-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none; /* Remove underline from anchor tags */
+    display: inline-block; /* Allows for padding and margin */
+    text-align: center; /* Center text within the button */
+}
+
+button:disabled, .footer-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #ccc;
+    color: #000;
+}
+
+footer p {
+    margin: 0;
+}
+.footer-button {
+    padding: 10px 20px;
+    margin-top: 20px;
+    border: 1px solid #000;
+    background-color: #fff;
+    text-align: center;
+    display: inline-block; /* Makes it possible to set padding and margin */
+    text-decoration: none; /* Removes the underline from the link */
+    color: #000;
+    cursor: pointer;
+}
+
+.footer-button:hover {
+    background-color: #e0e0e0;
+}
