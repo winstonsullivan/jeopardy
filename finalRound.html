@@ -6,29 +6,31 @@
     <link rel="stylesheet" href="finalRound.css">
 </head>
 <body>
-    <header>
-        <h1>FINAL ROUND</h1>
-        <h2 id="player-turn">PLAYER TURN</h2>
-    </header>
+    <div class="content-wrap">
+        <header>
+            <h1>FINAL ROUND</h1>
+            <h2 id="player-turn">PLAYER TURN</h2>
+        </header>
 
-    <main>
-        <div id="final-category">
-            <input type="text" id="category" placeholder="FINAL CATEGORY" disabled>
-        </div>
-        
-        <div id="final-question">
-            <textarea id="question" placeholder="FINAL QUESTION" disabled></textarea>
-        </div>
-        
-        <form id="betting-form">
-            <input type="number" id="bet-amount" placeholder="Point bet amount..." min="0">
-            <input type="text" id="final-answer" placeholder="Final answer...">
-            <button type="submit" id="bet-button" disabled>BET</button>
-        </form>
-    </main>
+        <main>
+            <div id="final-category">
+                <input type="text" id="category" placeholder="FINAL CATEGORY" disabled>
+            </div>
+            
+            <div id="final-question">
+                <textarea id="question" placeholder="FINAL QUESTION" disabled></textarea>
+            </div>
+            
+            <form id="betting-form">
+                <input type="number" id="bet-amount" placeholder="Point bet amount..." min="0">
+                <input type="text" id="final-answer" placeholder="Final answer...">
+                <button type="submit" id="bet-button" disabled>BET</button>
+            </form>
+        </main>
+    </div>
 
     <footer>
-        <a href="index.html" class="footer-button">RETURN TO MAIN</a>
+        <a href="index.html" class="restart-game-button">Restart Game</a>
         <p>&copy; 2024 Jeopardy Game. All rights reserved.</p>
         <p>Developed by Winston Sullivan.</p>
     </footer>

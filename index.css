@@ -1,4 +1,3 @@
-/* Reset margins and padding */
 * {
     margin: 0;
     padding: 0;
@@ -10,10 +9,16 @@ body, html {
     font-family: Arial, sans-serif;
 }
 
-.wrapper {
+body {
     display: flex;
     flex-direction: column;
-    height: 100%;
+    min-height: 100vh;
+}
+
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -23,46 +28,50 @@ header {
 
 h1 {
     font-size: 2em;
-    margin-bottom: 10px; /* Reduce the margin-bottom to bring it closer to the image */
+    margin-bottom: 10px;
 }
 
 main {
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;
 }
 
 .game-image {
-    max-width: 80%;
+    width: 85%;
     height: auto;
+    max-height: 80%;
     display: block;
     margin: 0 auto;
     object-fit: contain;
 }
 
-.game-image:after {
-    content: "Game Visual Placeholder";
-    font-style: italic;
-    color: #666;
-}
-
 .play-button {
+    display: block;
+    width: fit-content;
     padding: 10px 20px;
-    margin-bottom: 20px;
-    border: 1px solid #000;
-    background-color: #fff;
+    margin: 20px auto;
+    text-align: center;
+    background-color: #007bff;
+    color: #FFD700;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
 .play-button:hover {
-    background-color: #f0f0f0;
+    background-color: #0056b3;
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    margin-top: 40px;
     padding: 20px;
     background-color: #ccc;
     color: #000;
@@ -72,24 +81,14 @@ footer p {
     margin: 0;
 }
 
-.footer-button {
-    padding: 10px 20px;
-    margin-top: 20px;
-    border: 1px solid #000;
-    background-color: #fff;
-    text-align: center;
-    display: inline-block;
-    text-decoration: none;
-    color: #000;
-    cursor: pointer;
-}
-
-.footer-button:hover {
-    background-color: #e0e0e0;
-}
-
-@media (max-width: 600px) {
+@media (max-width: 767px) {
     .game-image {
-        width: 90%;
+        max-width: 85%;
+        margin-bottom: 10px;
+    }
+
+    footer {
+        position: static;
+        padding: 10px;
     }
 }

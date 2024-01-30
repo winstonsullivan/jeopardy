@@ -12,14 +12,10 @@ body, html {
     line-height: 1.6;
 }
 
-body {
+.content-wrap {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-}
-
-.content-wrap {
-    flex: 1;
 }
 
 header {
@@ -51,53 +47,89 @@ h1, h2 {
     margin: 10px 0;
 }
 
-#final-category, #final-question, #betting-form {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 10px;
+.next-round-button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
-input[type="text"], input[type="number"], textarea {
-    width: 100%;
+.next-round-button:hover {
+    background-color: #0056b3;
+}
+
+#jeopardy-board {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    max-width: 1000px;
+    margin: 20px auto;
     padding: 10px;
-    margin-bottom: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #ccc;
+}
+
+.category, .points {
+    text-align: center;
+    padding: 10px;
     border: 1px solid #ccc;
 }
 
-button, .restart-game-button {
+.category {
+    background-color: #007bff;
+    color: #fff;
+    font-weight: bold;
+}
+
+.points {
+    cursor: pointer;
+    background-color: #f8f8f8;
+}
+
+#player-interaction {
+    text-align: center;
+    margin: 20px 0;
+}
+
+#player-interaction input[type="text"] {
+    padding: 10px;
+    width: 300px;
+    border: 1px solid #ccc;
+}
+
+#player-interaction button {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
 }
 
-button:hover, .restart-game-button:hover {
+#player-interaction button:hover {
     background-color: #0056b3;
 }
 
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+#scoreboard {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+#scoreboard .score {
+    font-size: 18px;
 }
 
 footer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     padding: 20px;
     background-color: #ccc;
     color: #000;
-}
-
-footer .restart-game-button {
-    margin-bottom: 20px;
+    margin-top: auto;
 }
 
 footer p {
