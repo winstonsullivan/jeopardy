@@ -2,8 +2,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const player1ScoreSpan = document.getElementById('player1-score');
     const player2ScoreSpan = document.getElementById('player2-score');
     const responseInput = document.getElementById('player-response');
-    let player1Score = 0;
-    let player2Score = 0;
+    let player1Score = parseInt(localStorage.getItem('player1Score'), 10) || 0;
+    let player2Score = parseInt(localStorage.getItem('player2Score'), 10) || 0;
     let currentPlayer = 1;
 
     function updateScores() {
@@ -29,29 +29,23 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('correct-button').addEventListener('click', () => {
         const pointsValue = parseInt(responseInput.value, 10);
         if (!isNaN(pointsValue)) {
-            if (currentPlayer === 1) {
-                player1Score += pointsValue;
-            } else {
-                player2Score += pointsValue;
-            }
+            if (currentPlayer === 1) player1Score += pointsValue;
+            else player2Score += pointsValue;
             updateScores();
+            switchPlayer();
+            responseInput.value = '';
         }
-        switchPlayer();
-        responseInput.value = '';
     });
 
     document.getElementById('incorrect-button').addEventListener('click', () => {
         const pointsValue = parseInt(responseInput.value, 10);
         if (!isNaN(pointsValue)) {
-            if (currentPlayer === 1) {
-                player1Score -= pointsValue;
-            } else {
-                player2Score -= pointsValue;
-            }
+            if (currentPlayer === 1) player1Score -= pointsValue;
+            else player2Score -= pointsValue;
             updateScores();
+            switchPlayer();
+            responseInput.value = '';
         }
-        switchPlayer();
-        responseInput.value = '';
     });
 
     updateScores();

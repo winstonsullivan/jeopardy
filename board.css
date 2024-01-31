@@ -100,17 +100,24 @@ h1, h2 {
     border: 1px solid #ccc;
 }
 
-#player-interaction button {
+#player-interaction .correct-btn, #player-interaction .incorrect-btn {
     padding: 10px 20px;
-    background-color: #007bff;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
+#player-interaction .correct-btn {
+    background-color: #28a745;
+}
+
+#player-interaction .incorrect-btn {
+    background-color: #dc3545;
+}
+
 #player-interaction button:hover {
-    background-color: #0056b3;
+    opacity: 0.9;
 }
 
 #scoreboard {
@@ -122,16 +129,53 @@ h1, h2 {
 
 #scoreboard .score {
     font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
 }
 
 footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 20px;
     background-color: #ccc;
     color: #000;
     margin-top: auto;
-}
+}   
 
 footer p {
     margin: 0;
+}
+
+/* Galaxy S8+ */
+@media screen and (device-width: 360px) and (device-height: 740px) {
+    .category, .points, #scoreboard .score {
+        height: 13.4em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0; /
+    }       
+
+    #player-interaction {
+        display: flex; 
+        flex-direction: row; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    #player-interaction input[type="text"] {
+        flex: 1; 
+        margin: 0 10px; 
+    }
+
+    #player-interaction .correct-btn, #player-interaction .incorrect-btn {
+        height: 8em; 
+        padding: 0 20px; 
+        margin: 0 10px; 
+    }
 }

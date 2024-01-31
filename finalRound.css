@@ -20,6 +20,8 @@ body {
 
 .content-wrap {
     flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -52,6 +54,7 @@ h1, h2 {
 }
 
 #final-category, #final-question, #betting-form {
+    width: 100%;
     max-width: 600px;
     margin: 20px auto;
     padding: 10px;
@@ -64,7 +67,11 @@ input[type="text"], input[type="number"], textarea {
     border: 1px solid #ccc;
 }
 
-button, .restart-game-button {
+#betting-form {
+    text-align: center;
+}
+
+#betting-form button, .restart-game-button {
     padding: 10px 20px;
     background-color: #007bff;
     color: white;
@@ -73,16 +80,11 @@ button, .restart-game-button {
     cursor: pointer;
     text-decoration: none;
     display: inline-block;
-    text-align: center;
+    margin: 10px 5px;
 }
 
-button:hover, .restart-game-button:hover {
-    background-color: #0056b3;
-}
-
-button:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
+#betting-form button:hover, .restart-game-button:hover {
+    background-color: #95ff00;
 }
 
 footer {
@@ -96,10 +98,74 @@ footer {
     color: #000;
 }
 
-footer .restart-game-button {
-    margin-bottom: 20px;
-}
-
 footer p {
     margin: 0;
+}
+
+.audio-player-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#scoreboard {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1000px;
+    margin: 20px auto;
+    flex-wrap: wrap;
+}
+
+#scoreboard .score {
+    font-size: 18px;
+    background-color: #007bff;
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+@media (max-width: 767px) {
+    #final-category, #final-question, #betting-form {
+        width: 90%;
+    }
+
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-container button, .restart-game-button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (device-width: 360px) and (device-height: 740px) {
+    #final-category, #final-question, #betting-form, .audio-player-container {
+        width: 100%;
+        padding: 5px;
+        margin-bottom: 40px; 
+    }
+
+    input[type="text"], input[type="number"], textarea, #betting-form button, .restart-game-button {
+        font-size: 42px;
+        padding: 20px; 
+        margin-bottom: 40px; 
+    }
+
+    #scoreboard .score {
+        font-size: 42px;
+        margin-bottom: 40px; 
+    }
+
+    .button-container button, #betting-form button, .restart-game-button {
+        padding: 15px 30px;
+        margin: 20px 0;
+    }
+
+    footer {
+        margin-top: auto; 
+        padding: 40px; 
+    }
 }

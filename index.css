@@ -5,8 +5,11 @@
 }
 
 body, html {
-    height: 100%;
     font-family: Arial, sans-serif;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.6;
+    height: 100%;
 }
 
 body {
@@ -15,51 +18,49 @@ body {
     min-height: 100vh;
 }
 
-.container {
-    flex-grow: 1;
+.content-wrap {
+    flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 header {
-    text-align: center;
     padding: 20px;
+    background-color: #f0f0f0;
 }
 
 h1 {
-    font-size: 2em;
-    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #666;
+    margin: 10px 0;
 }
 
 main {
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    flex-grow: 1;
 }
 
 .game-image {
-    width: 85%;
-    height: auto;
-    max-height: 80%;
-    display: block;
+    width: 90%; 
+    height: 55vh; 
     margin: 0 auto;
     object-fit: contain;
 }
 
 .play-button {
-    display: block;
-    width: fit-content;
-    padding: 10px 20px;
-    margin: 20px auto;
-    text-align: center;
+    padding: 40px 80px;
     background-color: #007bff;
     color: #FFD700;
     text-decoration: none;
-    border: none;
     border-radius: 5px;
     cursor: pointer;
+    margin-top: 10px;
+    font-size: 3rem; 
 }
 
 .play-button:hover {
@@ -81,14 +82,3 @@ footer p {
     margin: 0;
 }
 
-@media (max-width: 767px) {
-    .game-image {
-        max-width: 85%;
-        margin-bottom: 10px;
-    }
-
-    footer {
-        position: static;
-        padding: 10px;
-    }
-}
